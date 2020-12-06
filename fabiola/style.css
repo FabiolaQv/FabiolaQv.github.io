@@ -301,11 +301,12 @@ figure{
     height: 50px;
   }
   .header a{
-    justify-content: center;
+    justify-content: left;
     height: 40px;
     font-size: 1.5em;
     margin-bottom: .5em;
   }
+  
   
 
  /*acomodar el logo cuando aparece burger button */
