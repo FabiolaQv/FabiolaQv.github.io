@@ -10,6 +10,7 @@
   font-display: block;
 }
 
+
 [class^="icon-"], [class*=" icon-"] {
   font-family: 'icomoon' !important;
   font-style: normal;
@@ -25,9 +26,12 @@
 
 .icon-menu:before {
   content: "\e900";
+ 
+ 
 }
 
 body{
+  background: #cf830a;
   margin:0;
   font-family: 'Source Sans Pro', sans-serif;
 }
@@ -124,7 +128,7 @@ figure{
   flex-shrink: 0;
   border-radius: 10px;
   overflow: hidden;
-  background-color: #f4fbff;
+  background-color: #822211;
 }
 .event img{
   width: 480px;
@@ -140,7 +144,7 @@ figure{
   text-align: center;
 }
 .event p{
-  text-align: left;
+  text-align: justify;
 }
 .event a{
   margin: 10px;
@@ -180,5 +184,142 @@ figure{
   z-index: 10;
   left: 5px;
   top: 5px;
-  color: white;
+  color: orange;
 }
+
+
+
+
+@media screen and (max-width: 1024px){
+  .container{
+    padding: 0 30px;
+  }
+  .event-title{
+    margin: 10px;
+  }
+  .event-detail h3{
+    font-size: 30px;
+  }
+  .event-detail p{
+    font-size: 19px;
+  }
+}
+
+@media screen and (max-width: 768px){
+  .event{
+    width: 80%;
+    margin-bottom: 20px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #822211;
+  }
+
+  /*ajustar imagenes*/
+  .event img{
+    width: 100%;
+    height: 250%;
+  }
+  .event-detail p{
+    font-size: 18px;
+  }
+  .event-title{
+    margin: 15px;
+    font-size: 23px;
+  }
+  .event-detail p{
+    font-size: 22px;
+    margin: 5px;
+  }
+}
+
+.container{
+    /*cuadros en el centro */
+    justify-content: center;
+  }
+
+
+/* funcion para telefonos movil */
+
+@media screen and (max-width:600px){
+ img {
+ max-width:290px;
+ }
+ /* funcion para surface duo */
+
+@media screen and (max-width:540px){
+ img {
+ max-width:720px;
+ }
+
+
+
+  /* funcion para  burger button */
+  .burger-button{
+    display: block;
+
+
+  }
+
+ 
+
+  .menu{
+    position: fixed;
+    background-color: rgb(73, 73, 73);
+    /* agregar tranparencia a la barra de menu lateral*/
+    opacity: 0.5;
+    filter:  alpha(opacity=50);
+
+    z-index: 1;
+    top: 0;
+    bottom: 0;
+    left: -100vw;
+    width: 40vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+  }
+
+ /* funcionamiento de la barra para aparecer en burger button*/
+  .menu.is-active{
+    left: 0;
+    background-color: #542b0e; 
+
+  }
+
+  .header{
+    display: block;
+    height: auto;
+  }
+   /* agregar en forma de listado en burger button*/
+   .header ul {
+    display: initial;
+  }
+  .header ul li {
+    height: 50px;
+  }
+  .header a{
+    justify-content: center;
+    height: 40px;
+    font-size: 1.5em;
+    margin-bottom: .5em;
+  }
+  
+
+ /*acomodar el logo cuando aparece burger button */
+  .header .logo {
+    text-align: right;
+    height: 50px;
+    padding-top: 10px;
+  }
+  
+  .event-detail{
+    margin: 20px 20px;
+  }
+
+
+
+
+}
+
